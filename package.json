@@ -34,5 +34,11 @@
 		"typescript-eslint": "^8.0.0-alpha.20",
 		"vite": "^5.0.3"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@fontsource/bebas-neue": "^5.0.20",
+		"@fontsource/fira-sans": "^5.0.20",
+		"@fontsource/ibm-plex-serif": "^5.0.13",
+		"@fontsource/staatliches": "^5.0.20"
+	}
 }

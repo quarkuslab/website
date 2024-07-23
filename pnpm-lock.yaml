@@ -7,6 +7,19 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@fontsource/bebas-neue':
+        specifier: ^5.0.20
+        version: 5.0.20
+      '@fontsource/fira-sans':
+        specifier: ^5.0.20
+        version: 5.0.20
+      '@fontsource/ibm-plex-serif':
+        specifier: ^5.0.13
+        version: 5.0.13
+      '@fontsource/staatliches':
+        specifier: ^5.0.20
+        version: 5.0.20
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^3.0.0
@@ -245,6 +258,18 @@ packages:
   '@eslint/object-schema@2.1.4':
     resolution: {integrity: sha512-BsWiH1yFGjXXS2yvrf5LyuoSIIbPrGUWob917o+BTKuZ7qJdxX8aJLRxs1fS9n6r7vESrq1OUqb68dANcFXuQQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@fontsource/bebas-neue@5.0.20':
+    resolution: {integrity: sha512-lJ/y3N/dzOZw1j1ArSOju0Mcz5vEyn81WsUm+ECIicnkT3Um6Y/+IUW+k7roWKSj1pKTu+kyFPZMuVhikoQZBw==}
+
+  '@fontsource/fira-sans@5.0.20':
+    resolution: {integrity: sha512-inmUjoKPrgnO4uUaZTAgP0b6YdhDfA52axHXvdTwgLvwd2kn3ZgK52UZoxD0VnrvTOjLA/iE4oC0tNtz4nyb5g==}
+
+  '@fontsource/ibm-plex-serif@5.0.13':
+    resolution: {integrity: sha512-cJsfWHOljHPbFTXjrsYiNw6i2YclggFb6YTueFiw9gr0AJxtgzizh2ObgrvVtEZlQt/UFmCetpK4W27UM5v5/A==}
+
+  '@fontsource/staatliches@5.0.20':
+    resolution: {integrity: sha512-2DTGEfHn6Jz/LW2gEg0HQ92fbQk0KzDpuXrJy9WM1smee/Bw8ANgK4m+EA/FCaHP8b3BOs0B4XNoiM74leA6IA==}
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -1673,6 +1698,14 @@ snapshots:
   '@eslint/js@9.7.0': {}
 
   '@eslint/object-schema@2.1.4': {}
+
+  '@fontsource/bebas-neue@5.0.20': {}
+
+  '@fontsource/fira-sans@5.0.20': {}
+
+  '@fontsource/ibm-plex-serif@5.0.13': {}
+
+  '@fontsource/staatliches@5.0.20': {}
 
   '@humanwhocodes/module-importer@1.0.1': {}
 

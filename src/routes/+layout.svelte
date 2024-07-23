@@ -1,5 +1,11 @@
 <script>
 	import '../app.css';
+	import '@fontsource/staatliches';
+
+	import Mouse from '$lib/components/Mouse.svelte';
 </script>
 
-<slot />
+<Mouse />
+<main class="bg-orange-50">
+	<slot />
+</main>
