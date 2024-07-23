@@ -25,14 +25,18 @@
 		></path><path
 			class="uuid-d0140df8-6103-4122-ad87-c913e4523b6e"
 			d="M7.86.5h225.97c4.06,0,7.36,3.3,7.36,7.36v7.79H.5v-7.79C.5,3.8,3.8.5,7.86.5Z"
-		></path><circle class="uuid-9307a730-6cd2-4cbe-b4da-87607532a78d" cx="9.42" cy="8.52" r="3.39"
+		></path><circle
+			class="uuid-9307a730-6cd2-4cbe-b4da-87607532a78d-dot"
+			cx="9.42"
+			cy="8.52"
+			r="3.39"
 		></circle><circle
-			class="uuid-9307a730-6cd2-4cbe-b4da-87607532a78d"
+			class="uuid-9307a730-6cd2-4cbe-b4da-87607532a78d-dot"
 			cx="19.58"
 			cy="8.52"
 			r="3.39"
 		></circle><circle
-			class="uuid-9307a730-6cd2-4cbe-b4da-87607532a78d"
+			class="uuid-9307a730-6cd2-4cbe-b4da-87607532a78d-dot"
 			cx="29.74"
 			cy="8.52"
 			r="3.39"
@@ -119,7 +123,7 @@
 		@apply fill-foreground;
 	}
 	.uuid-7d7b9bf3-202f-4fc8-92c3-65cd41bfa507 {
-		@apply stroke-foreground;
+		@apply stroke-foreground/40;
 	}
 	.uuid-7d7b9bf3-202f-4fc8-92c3-65cd41bfa507,
 	.uuid-d0140df8-6103-4122-ad87-c913e4523b6e {
@@ -127,11 +131,14 @@
 		stroke-miterlimit: 10;
 	}
 	.uuid-d0140df8-6103-4122-ad87-c913e4523b6e {
-		@apply stroke-foreground;
+		@apply stroke-foreground/40;
 	}
 	.uuid-9307a730-6cd2-4cbe-b4da-87607532a78d {
-		fill: #eee3da;
 		stroke-width: 0px;
-		@apply fill-foreground-light;
+		@apply fill-foreground/20;
+	}
+	.uuid-9307a730-6cd2-4cbe-b4da-87607532a78d-dot {
+		stroke-width: 0px;
+		@apply fill-background/50;
 	}
 </style>

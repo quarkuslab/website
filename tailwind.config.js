@@ -11,9 +11,8 @@ export default {
         staal: ['Staatliches', 'system-ui'],
       },
       colors: {
-        background: colors.purple[50],
-        foreground: colors.purple[800],
-        'foreground-light': colors.purple[300] 
+        background: colors.sky[50],
+        foreground: colors.sky[800],
       }
     },
   },

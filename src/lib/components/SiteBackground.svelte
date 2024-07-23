@@ -128,7 +128,7 @@
 	.uuid-f50f9301-d989-4a65-b9dc-d2b0c13fe632 {
 		fill: none;
 		stroke-miterlimit: 10;
-		@apply stroke-foreground-light;
+		@apply stroke-foreground/30;
 	}
 	.uuid-26106bdf-5b23-4cf2-8cdf-50f49db7b129 {
 		opacity: 0.8;
