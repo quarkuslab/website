@@ -6,6 +6,6 @@
 </script>
 
 <Mouse />
-<main class="bg-orange-50">
+<main class="bg-background">
 	<slot />
 </main>

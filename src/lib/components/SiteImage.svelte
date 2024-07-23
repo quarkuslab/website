@@ -2,31 +2,7 @@
 	id="uuid-f8df215d-2683-445c-9843-65e73f6b3a0d"
 	xmlns="http://www.w3.org/2000/svg"
 	viewBox="0 0 241.7 186.07"
-	><defs
-		><style>
-			.uuid-f13be8c3-7350-4cad-b985-fd6d52c5ffa3 {
-				fill: #fff;
-			}
-			.uuid-6d0d5f7e-9bbb-4b74-9fb3-4bbdc77bc65b {
-				fill: #6d4f3c;
-			}
-			.uuid-7d7b9bf3-202f-4fc8-92c3-65cd41bfa507 {
-				stroke: #eee2da;
-			}
-			.uuid-7d7b9bf3-202f-4fc8-92c3-65cd41bfa507,
-			.uuid-d0140df8-6103-4122-ad87-c913e4523b6e {
-				fill: none;
-				stroke-miterlimit: 10;
-			}
-			.uuid-d0140df8-6103-4122-ad87-c913e4523b6e {
-				stroke: #6d4a3c;
-			}
-			.uuid-9307a730-6cd2-4cbe-b4da-87607532a78d {
-				fill: #eee3da;
-				stroke-width: 0px;
-			}
-		</style></defs
-	><g id="uuid-9785f4fc-f419-46ae-ba49-e3d08e620ddc"
+	><defs></defs><g id="uuid-9785f4fc-f419-46ae-ba49-e3d08e620ddc"
 		><rect
 			class="uuid-f13be8c3-7350-4cad-b985-fd6d52c5ffa3"
 			x=".5"
@@ -134,3 +110,28 @@
 		></line></g
 	></svg
 >
+
+<style>
+	.uuid-f13be8c3-7350-4cad-b985-fd6d52c5ffa3 {
+		fill: #fff;
+	}
+	.uuid-6d0d5f7e-9bbb-4b74-9fb3-4bbdc77bc65b {
+		@apply fill-foreground;
+	}
+	.uuid-7d7b9bf3-202f-4fc8-92c3-65cd41bfa507 {
+		@apply stroke-foreground;
+	}
+	.uuid-7d7b9bf3-202f-4fc8-92c3-65cd41bfa507,
+	.uuid-d0140df8-6103-4122-ad87-c913e4523b6e {
+		fill: none;
+		stroke-miterlimit: 10;
+	}
+	.uuid-d0140df8-6103-4122-ad87-c913e4523b6e {
+		@apply stroke-foreground;
+	}
+	.uuid-9307a730-6cd2-4cbe-b4da-87607532a78d {
+		fill: #eee3da;
+		stroke-width: 0px;
+		@apply fill-foreground-light;
+	}
+</style>
