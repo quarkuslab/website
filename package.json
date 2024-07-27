@@ -17,6 +17,7 @@
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@types/eslint": "^8.56.7",
+		"@types/lodash": "^4.17.7",
 		"autoprefixer": "^10.4.19",
 		"eslint": "^9.0.0",
 		"eslint-config-prettier": "^9.1.0",
@@ -36,9 +37,11 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource-variable/noto-serif": "^5.0.6",
 		"@fontsource/bebas-neue": "^5.0.20",
 		"@fontsource/fira-sans": "^5.0.20",
 		"@fontsource/ibm-plex-serif": "^5.0.13",
-		"@fontsource/staatliches": "^5.0.20"
+		"@fontsource/staatliches": "^5.0.20",
+		"lodash": "^4.17.21"
 	}
 }
