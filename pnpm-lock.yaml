@@ -11,6 +11,9 @@ importers:
       '@fontsource-variable/noto-serif':
         specifier: ^5.0.6
         version: 5.0.6
+      '@fontsource/aref-ruqaa':
+        specifier: ^5.0.13
+        version: 5.0.13
       '@fontsource/bebas-neue':
         specifier: ^5.0.20
         version: 5.0.20
@@ -20,6 +23,9 @@ importers:
       '@fontsource/ibm-plex-serif':
         specifier: ^5.0.13
         version: 5.0.13
+      '@fontsource/kurale':
+        specifier: ^5.0.14
+        version: 5.0.14
       '@fontsource/staatliches':
         specifier: ^5.0.20
         version: 5.0.20
@@ -274,6 +280,9 @@ packages:
   '@fontsource-variable/noto-serif@5.0.6':
     resolution: {integrity: sha512-SG+llg2fY8ODJY3XDOXYgcpRT3hObv6luSehW92c+n7m1JQpsudLNcjibykW5U4+JGHHTz0KP52ozDXe6FUTjA==}
 
+  '@fontsource/aref-ruqaa@5.0.13':
+    resolution: {integrity: sha512-Oqm+ucFkPKpy5sLtJzjmo2OJg5MsVJm+o/TJTXHK0RKNO5WlJQeq9WTHy80B+YgtEyJ5/G35EOwiboqvrCb4+A==}
+
   '@fontsource/bebas-neue@5.0.20':
     resolution: {integrity: sha512-lJ/y3N/dzOZw1j1ArSOju0Mcz5vEyn81WsUm+ECIicnkT3Um6Y/+IUW+k7roWKSj1pKTu+kyFPZMuVhikoQZBw==}
 
@@ -282,6 +291,9 @@ packages:
 
   '@fontsource/ibm-plex-serif@5.0.13':
     resolution: {integrity: sha512-cJsfWHOljHPbFTXjrsYiNw6i2YclggFb6YTueFiw9gr0AJxtgzizh2ObgrvVtEZlQt/UFmCetpK4W27UM5v5/A==}
+
+  '@fontsource/kurale@5.0.14':
+    resolution: {integrity: sha512-ZfDIsNkvwI8cExypQTUK8fvJtwnz0A7SmMTvJ8TNwOmrCPVdwQlSjvBr+ShHpu/iD5wsnoL2dHgOwmuVJrlX9A==}
 
   '@fontsource/staatliches@5.0.20':
     resolution: {integrity: sha512-2DTGEfHn6Jz/LW2gEg0HQ92fbQk0KzDpuXrJy9WM1smee/Bw8ANgK4m+EA/FCaHP8b3BOs0B4XNoiM74leA6IA==}
@@ -1728,11 +1740,15 @@ snapshots:
 
   '@fontsource-variable/noto-serif@5.0.6': {}
 
+  '@fontsource/aref-ruqaa@5.0.13': {}
+
   '@fontsource/bebas-neue@5.0.20': {}
 
   '@fontsource/fira-sans@5.0.20': {}
 
   '@fontsource/ibm-plex-serif@5.0.13': {}
+
+  '@fontsource/kurale@5.0.14': {}
 
   '@fontsource/staatliches@5.0.20': {}
 

@@ -11,5 +11,5 @@
 	<div class="mb-20 mt-10 h-auto w-full">
 		<slot name="icon" />
 	</div>
-	<div class="mb-5 font-noto text-4xl text-foreground">{title}</div>
+	<div class="font-nelphim mb-5 text-4xl text-foreground">{title}</div>
 </div>

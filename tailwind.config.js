@@ -10,7 +10,11 @@ export default {
         ibm: ['IBM Plex Serif', 'serif'],
 				fira: ['Fira Sans', 'sans-serif'],
         staal: ['Staatliches', 'system-ui'],
-        noto: ['Noto Serif Variable', 'serif']
+        noto: ['Noto Serif Variable', 'serif'],
+        aref: ['Aref Ruqaa', 'serif'],
+        kurale: ['Kurale', 'serif'],
+        aesthetic: ['aestheticregular', 'serif'],
+        nelphim: ['nelphim', 'serif']
       },
       colors: {
         background: colors.sky[50],

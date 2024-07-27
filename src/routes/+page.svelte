@@ -22,7 +22,7 @@
 	<div class="container mx-auto flex flex-1 items-center py-12">
 		<div class="mb-40 grid grid-cols-2 items-center gap-10">
 			<div>
-				<div class="mb-5 font-noto text-6xl text-foreground" use:grow={{ size: 80 }}>
+				<div class="font-nelphim mb-5 text-6xl font-light text-foreground" use:grow={{ size: 80 }}>
 					Let's build a website <br /> that makes you the easy choice
 				</div>
 				<div class="mb-10 font-fira text-xl text-foreground" use:grow={{ size: 50 }}>
@@ -45,10 +45,11 @@
 <section class="container mx-auto max-w-screen-xl py-20">
 	<div class="mb-20 grid place-items-center">
 		<div
-			class="inline-block text-center font-noto text-5xl text-foreground"
+			class="font-nelphim inline-block text-center text-4xl text-foreground"
 			use:grow={{ size: 80 }}
 		>
-			Lorem ipsum dolor sit <br /> amet consectetur.
+			Imagine a website that doesn't just <br />
+			show you exist, but sets the new standard.
 		</div>
 	</div>
 	<div class="grid grid-cols-3 gap-5">
