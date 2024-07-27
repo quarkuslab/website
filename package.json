@@ -42,6 +42,7 @@
 		"@fontsource/fira-sans": "^5.0.20",
 		"@fontsource/ibm-plex-serif": "^5.0.13",
 		"@fontsource/staatliches": "^5.0.20",
+		"@tailwind-plugin/expose-colors": "^1.1.8",
 		"lodash": "^4.17.21"
 	}
 }

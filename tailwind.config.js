@@ -1,4 +1,5 @@
 import * as colors from "tailwindcss/colors"
+import exposeColors from "@tailwind-plugin/expose-colors"
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -14,9 +15,23 @@ export default {
       colors: {
         background: colors.sky[50],
         foreground: colors.sky[800],
+      },
+      container: {
+        padding: {
+          '2xl': "2rem",
+          "xl": "4rem"
+        },
+        // screens: {
+        //   '2xl': "1240px"
+        // }
       }
     },
   },
-  plugins: [],
+  plugins: [
+    exposeColors({
+      extract: ["background", "foreground"],
+      prefix: "--color"
+    })
+  ],
 }
 

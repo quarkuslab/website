@@ -1,4 +1,8 @@
 <script>
+	import Card from '$lib/components/Card.svelte';
+	import GraphicArc from '$lib/components/GraphicArc.svelte';
+	import GraphicBar from '$lib/components/GraphicBar.svelte';
+	import GraphicCircle from '$lib/components/GraphicCircle.svelte';
 	import { grow, stick } from '$lib/components/mouse/actions';
 	import SiteBackground from '$lib/components/SiteBackground.svelte';
 	import SiteImage from '$lib/components/SiteImage.svelte';
@@ -9,9 +13,9 @@
 		<div class="container mx-auto flex h-full items-center justify-between">
 			<div class="font-staal text-2xl uppercase tracking-[0.2em] text-foreground">Quarkus</div>
 			<div class="flex gap-5">
-				<a class="rounded-md px-3 py-1 text-foreground" href="/" use:stick>Services</a>
-				<a class="rounded-md px-3 py-1 text-foreground" href="/" use:stick>About</a>
-				<a class="rounded-md px-3 py-1 text-foreground" href="/" use:stick>Contact</a>
+				<a class="rounded-md px-3 py-1 font-fira text-foreground" href="/" use:stick>Services</a>
+				<a class="rounded-md px-3 py-1 font-fira text-foreground" href="/" use:stick>About</a>
+				<a class="rounded-md px-3 py-1 font-fira text-foreground" href="/" use:stick>Contact</a>
 			</div>
 		</div>
 	</nav>
@@ -38,7 +42,7 @@
 	</div>
 </section>
 
-<section class="container mx-auto py-20">
+<section class="container mx-auto max-w-screen-xl py-20">
 	<div class="mb-20 grid place-items-center">
 		<div
 			class="inline-block text-center font-noto text-5xl text-foreground"
@@ -47,44 +51,17 @@
 			Lorem ipsum dolor sit <br /> amet consectetur.
 		</div>
 	</div>
-	<div class="grid grid-cols-3 gap-10">
-		<div
-			class="flex w-full flex-col items-center justify-center rounded-xl bg-white px-20 py-10"
-			use:stick
-		>
-			<div class="mb-10 h-20 w-20 rounded-full bg-foreground"></div>
-			<div class="mb-5 font-noto text-4xl text-foreground">Design</div>
-			<div class="text-center font-fira text-foreground">
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus cumque dicta iure iusto
-				laborum quibusdam, eveniet aliquid pariatur eius asperiores repudiandae, velit repellat
-				nihil libero! Commodi amet optio repellendus quibusdam.
-			</div>
-		</div>
+	<div class="grid grid-cols-3 gap-5">
+		<Card title="Design">
+			<GraphicBar slot="icon" />
+		</Card>
 
-		<div
-			class="flex w-full flex-col items-center justify-center rounded-xl bg-white px-20 py-10"
-			use:stick
-		>
-			<div class="mb-10 h-20 w-20 rounded-full bg-foreground"></div>
-			<div class="mb-5 font-noto text-4xl text-foreground">Design</div>
-			<div class="text-center font-fira text-foreground">
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus cumque dicta iure iusto
-				laborum quibusdam, eveniet aliquid pariatur eius asperiores repudiandae, velit repellat
-				nihil libero! Commodi amet optio repellendus quibusdam.
-			</div>
-		</div>
+		<Card title="Development">
+			<GraphicArc slot="icon" />
+		</Card>
 
-		<div
-			class="flex w-full flex-col items-center justify-center rounded-xl bg-white px-20 py-10"
-			use:stick
-		>
-			<div class="mb-10 h-20 w-20 rounded-full bg-foreground"></div>
-			<div class="mb-5 font-noto text-4xl text-foreground">Design</div>
-			<div class="text-center font-fira text-foreground">
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus cumque dicta iure iusto
-				laborum quibusdam, eveniet aliquid pariatur eius asperiores repudiandae, velit repellat
-				nihil libero! Commodi amet optio repellendus quibusdam.
-			</div>
-		</div>
+		<Card title="Testing">
+			<GraphicCircle slot="icon" />
+		</Card>
 	</div>
 </section>
