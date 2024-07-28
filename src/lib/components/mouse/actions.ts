@@ -1,6 +1,6 @@
 import { circle, isMouseOverElement, rectangle } from "./utils"
 import type { ActionReturn } from "svelte/action"
-import { shouldTrack, shape, position, pointer } from "./store"
+import { shouldTrack, shape, position, pointer, shouldSyncScroll } from "./store"
 import { get } from "svelte/store"
 import debounce from "lodash/debounce"
 
@@ -12,10 +12,12 @@ export function grow(node: HTMLElement, parameters: MouseGrowParameters): Action
   node.addEventListener("mouseenter", () => {
     shape.set(circle(parameters.size))
     shouldTrack.set(true)
+    shouldSyncScroll.set(true)
   })
   node.addEventListener("mouseleave", () => {
     shape.set(circle(10))
     shouldTrack.set(true)
+    shouldSyncScroll.set(true)
   })
 
   return {}
@@ -23,16 +25,19 @@ export function grow(node: HTMLElement, parameters: MouseGrowParameters): Action
 
 export function stick(node: HTMLElement): ActionReturn {
   node.addEventListener("mouseenter", debounce((e: MouseEvent) => {
+    const fixedParent = node.closest(".fixed")
     const rect = node.getBoundingClientRect()
-    console.log("enter", isMouseOverElement({ x: e.clientX, y: e.clientY }, rect))
     const radius = parseInt(window.getComputedStyle(node).borderRadius.match(/\d+/)?.[0] || '0')
 
+    if (fixedParent) {
+      shouldSyncScroll.set(false)
+    }
     position.set({ x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 })
     shape.set(rectangle(rect.width, rect.height, radius))
     shouldTrack.set(false)
   }, 50))
   node.addEventListener("mouseleave", debounce(() => {
-    console.log("leave")
+    shouldSyncScroll.set(true)
     shouldTrack.set(true)
     shape.set(circle(10))
     position.set(get(pointer))

@@ -1,5 +1,5 @@
 import { get } from "svelte/store"
-import { pointer, position, shouldTrack } from "./store"
+import { pointer, position, shouldSyncScroll, shouldTrack } from "./store"
 
 export function trackMouseMove() {
   return (e: MouseEvent) => {
@@ -13,7 +13,7 @@ export function trackMouseMove() {
 export function trackScroll() {
   let last = 0
   return () => {
-    if (!get(shouldTrack)) {
+    if (!get(shouldTrack) && get(shouldSyncScroll)) {
       const delta = last - window.scrollY
       position.update(prev => ({ x: prev.x, y: prev.y + delta }), { hard: true })
     }
