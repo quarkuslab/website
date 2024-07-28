@@ -48,3 +48,7 @@ export function drawPath(shape: Shape, position: Position) {
     Z
     `
 }
+
+export function isMouseOverElement(pos: Position, rect: DOMRect): boolean {
+  return (pos.x >= rect.left && pos.x <= rect.right && pos.y >= rect.top && pos.y <= rect.bottom)
+}
