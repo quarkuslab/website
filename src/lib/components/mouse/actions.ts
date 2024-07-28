@@ -1,4 +1,4 @@
-import { circle, isMouseOverElement, rectangle } from "./utils"
+import { circle, rectangle } from "./utils"
 import type { ActionReturn } from "svelte/action"
 import { shouldTrack, shape, position, pointer, shouldSyncScroll } from "./store"
 import { get } from "svelte/store"
@@ -19,12 +19,11 @@ export function grow(node: HTMLElement, parameters: MouseGrowParameters): Action
     shouldTrack.set(true)
     shouldSyncScroll.set(true)
   })
-
   return {}
 }
 
 export function stick(node: HTMLElement): ActionReturn {
-  node.addEventListener("mouseenter", debounce((e: MouseEvent) => {
+  node.addEventListener("mouseenter", debounce(() => {
     const fixedParent = node.closest(".fixed")
     const rect = node.getBoundingClientRect()
     const radius = parseInt(window.getComputedStyle(node).borderRadius.match(/\d+/)?.[0] || '0')
