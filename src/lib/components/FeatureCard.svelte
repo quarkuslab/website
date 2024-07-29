@@ -5,7 +5,7 @@
 </script>
 
 <div class="flex rounded-xl px-5 py-10" use:stick>
-	<div class="h-20 w-20 text-foreground/40">
+	<div class="h-20 w-20 text-foreground/30">
 		<slot name="icon" />
 	</div>
 	<div class="font-roboto flex-1 pl-10 text-foreground">

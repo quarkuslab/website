@@ -5,6 +5,7 @@
 	import GraphicBar from '$lib/components/GraphicBar.svelte';
 	import GraphicCircle from '$lib/components/GraphicCircle.svelte';
 	import { grow, stick } from '$lib/components/mouse/actions';
+	import SectionHeader from '$lib/components/SectionHeader.svelte';
 	import SiteBackground from '$lib/components/SiteBackground.svelte';
 	import SiteImage from '$lib/components/SiteImage.svelte';
 </script>
@@ -32,41 +33,10 @@
 </section>
 
 <section class="container mx-auto max-w-screen-xl py-20">
-	<div class="mb-20 grid place-items-center">
-		<div
-			class="inline-block text-center font-nelphim text-4xl text-foreground"
-			use:grow={{ size: 80 }}
-		>
-			Imagine a website that doesn't just <br />
-			show you exist, but sets the new standard.
-		</div>
-	</div>
-	<div class="grid grid-cols-3 gap-5">
-		<Card title="Design">
-			<GraphicBar slot="icon" />
-		</Card>
-
-		<Card title="Development">
-			<GraphicArc slot="icon" />
-		</Card>
-
-		<Card title="Testing">
-			<GraphicCircle slot="icon" />
-		</Card>
-	</div>
-</section>
-
-<section class="container mx-auto mt-40 max-w-screen-xl py-20">
-	<div class="flex flex-col items-center rounded-xl border border-foreground/10 bg-white p-32">
-		<div
-			class="mb-10 inline-block text-center font-staal text-lg uppercase tracking-widest text-foreground"
-			use:grow={{ size: 40 }}
-		>
-			Features
-		</div>
-		<div class="text-center font-nelphim text-5xl text-foreground">
+	<div class=" rounded-xl border border-foreground/10 bg-white p-32">
+		<SectionHeader label="Features">
 			A website that works for <br /> your business.
-		</div>
+		</SectionHeader>
 		<div class="mt-20 grid w-full px-20">
 			<FeatureCard title="Stand-out digital presence">
 				<svelte:fragment slot="icon">
@@ -110,4 +80,24 @@
 		</div>
 	</div>
 </section>
+
+<section class="container mx-auto mt-60 max-w-screen-xl py-20">
+	<SectionHeader label="Process">
+		Imagine a website <br /> that sets the new standard.
+	</SectionHeader>
+	<div class="mt-20 grid grid-cols-3 gap-5">
+		<Card title="Design">
+			<GraphicBar slot="icon" />
+		</Card>
+
+		<Card title="Development">
+			<GraphicArc slot="icon" />
+		</Card>
+
+		<Card title="Testing">
+			<GraphicCircle slot="icon" />
+		</Card>
+	</div>
+</section>
+
 <section class="min-h-screen"></section>

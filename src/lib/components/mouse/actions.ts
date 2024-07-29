@@ -9,16 +9,16 @@ interface MouseGrowParameters {
 }
 
 export function grow(node: HTMLElement, parameters: MouseGrowParameters): ActionReturn {
-  node.addEventListener("mouseenter", () => {
+  node.addEventListener("mouseenter", debounce(() => {
     shape.set(circle(parameters.size))
     shouldTrack.set(true)
     shouldSyncScroll.set(true)
-  })
-  node.addEventListener("mouseleave", () => {
+  }, 50))
+  node.addEventListener("mouseleave", debounce(() => {
     shape.set(circle(10))
     shouldTrack.set(true)
     shouldSyncScroll.set(true)
-  })
+  }, 50))
   return {}
 }
 
