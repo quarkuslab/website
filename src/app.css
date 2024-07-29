@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-background;
+@layer base {
+  :root {
+    --color-bg: 240 249 255;
+    --color-fg: 7 89 133;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
 }

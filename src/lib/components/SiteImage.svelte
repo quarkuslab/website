@@ -117,7 +117,7 @@
 
 <style>
 	.uuid-f13be8c3-7350-4cad-b985-fd6d52c5ffa3 {
-		fill: #fff;
+		@apply fill-white;
 	}
 	.uuid-6d0d5f7e-9bbb-4b74-9fb3-4bbdc77bc65b {
 		@apply fill-foreground;

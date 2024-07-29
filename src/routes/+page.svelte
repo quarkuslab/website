@@ -5,6 +5,7 @@
 	import GraphicBar from '$lib/components/GraphicBar.svelte';
 	import GraphicCircle from '$lib/components/GraphicCircle.svelte';
 	import { grow, stick } from '$lib/components/mouse/actions';
+	import PlanCard from '$lib/components/PlanCard.svelte';
 	import SectionHeader from '$lib/components/SectionHeader.svelte';
 	import SiteBackground from '$lib/components/SiteBackground.svelte';
 	import SiteImage from '$lib/components/SiteImage.svelte';
@@ -33,7 +34,7 @@
 </section>
 
 <section class="container mx-auto max-w-screen-xl py-20">
-	<div class=" rounded-xl border border-foreground/10 bg-white p-32">
+	<div class=" rounded-xl border border-foreground/10 bg-white/70 p-32">
 		<SectionHeader label="Features">
 			A website that works for <br /> your business.
 		</SectionHeader>
@@ -81,7 +82,7 @@
 	</div>
 </section>
 
-<section class="container mx-auto mt-60 max-w-screen-xl py-20">
+<section class="container mx-auto mt-40 max-w-screen-xl py-20">
 	<SectionHeader label="Process">
 		Imagine a website <br /> that sets the new standard.
 	</SectionHeader>
@@ -97,6 +98,15 @@
 		<Card title="Testing">
 			<GraphicCircle slot="icon" />
 		</Card>
+	</div>
+</section>
+
+<section class="container mx-auto mt-40 py-20">
+	<SectionHeader label="Plans">We've got a plan that's perfect for you</SectionHeader>
+	<div class="mt-10 grid grid-cols-3 gap-5">
+		<PlanCard name="Standard" price={10} />
+		<PlanCard name="Premium" price={20} />
+		<PlanCard name="Enterprise" price={30} />
 	</div>
 </section>
 

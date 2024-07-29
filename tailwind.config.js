@@ -21,8 +21,20 @@ export default {
         inter: ['Inter Variable', 'sans-serif']
       },
       colors: {
-        background: colors.sky[50],
-        foreground: colors.sky[800],
+        background: 'rgb(var(--color-bg) / <alpha-value>)',
+        foreground: 'rgb(var(--color-fg) / <alpha-value>)',
+        primary: {
+          background: colors.sky[50],
+          foreground: colors.sky[800],
+        },
+        secondary: {
+          background: colors.purple[50],
+          foreground: colors.purple[800],
+        },
+        tertiary: {
+          background: colors.emerald[50],
+          foreground: colors.emerald[800],
+        }
       },
       container: {
         padding: {

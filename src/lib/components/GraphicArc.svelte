@@ -16,8 +16,8 @@
 			spreadMethod="pad"
 			gradientUnits="userSpaceOnUse"
 			gradientTransform="translate(0 0)"
-			><stop id="eaZtz5jUfTe6-fill-0" offset="0%" stop-color="var(--color-foreground)"></stop>
-			<stop id="eaZtz5jUfTe6-fill-1" offset="100%" stop-color="var(--color-background)"></stop>
+			><stop id="eaZtz5jUfTe6-fill-0" offset="0%" stop-color="rgb(var(--color-fg))"></stop>
+			<stop id="eaZtz5jUfTe6-fill-1" offset="100%" stop-color="rgb(var(--color-bg))"></stop>
 		</linearGradient>
 	</defs><g style="isolation:isolate" transform="translate(13.229954 22.051892)"
 		><g

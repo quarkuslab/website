@@ -14,9 +14,12 @@
 	import Mouse from '$lib/components/mouse/Mouse.svelte';
 	import { stick } from '$lib/components/mouse/actions';
 	import Navbar from '$lib/components/Navbar.svelte';
+	import { onMount } from 'svelte';
+	import ThemePicker from '$lib/components/ThemePicker.svelte';
 </script>
 
 <Mouse />
+<ThemePicker />
 <Navbar class="flex items-center justify-between">
 	<div class="font-staal text-2xl uppercase tracking-[0.2em] text-foreground">Quarkus</div>
 	<div class="flex gap-5">

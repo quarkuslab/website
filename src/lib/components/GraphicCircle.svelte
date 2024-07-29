@@ -17,8 +17,8 @@
 			gradientUnits="userSpaceOnUse"
 			gradientTransform="translate(0 0)"
 		>
-			<stop id="e5014s9wUkL5-fill-0" offset="0%" stop-color="var(--color-foreground)"></stop>
-			<stop id="e5014s9wUkL5-fill-1" offset="100%" stop-color="var(--color-background)"></stop>
+			<stop id="e5014s9wUkL5-fill-0" offset="0%" stop-color="rgb(var(--color-fg))"></stop>
+			<stop id="e5014s9wUkL5-fill-1" offset="100%" stop-color="rgb(var(--color-bg))"></stop>
 		</linearGradient>
 		<linearGradient
 			id="e5014s9wUkL6-fill"
@@ -30,8 +30,8 @@
 			gradientUnits="userSpaceOnUse"
 			gradientTransform="translate(0 0)"
 		>
-			<stop id="e5014s9wUkL6-fill-0" offset="0%" stop-color="var(--color-foreground)"></stop>
-			<stop id="e5014s9wUkL6-fill-1" offset="100%" stop-color="var(--color-background)"></stop>
+			<stop id="e5014s9wUkL6-fill-0" offset="0%" stop-color="rgb(var(--color-fg))"></stop>
+			<stop id="e5014s9wUkL6-fill-1" offset="100%" stop-color="rgb(var(--color-bg))"></stop>
 		</linearGradient>
 	</defs><g style="isolation:isolate" transform="translate(5 4.65)"
 		><g transform="translate(6.735001 6.264998)"
