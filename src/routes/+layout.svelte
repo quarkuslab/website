@@ -19,7 +19,7 @@
 </script>
 
 <Mouse />
-<!-- <ThemePicker /> -->
+<ThemePicker />
 <Navbar class="flex items-center justify-between">
 	<div class="font-staal text-2xl uppercase tracking-[0.2em] text-foreground">Quarkus</div>
 	<div class="flex gap-5">
