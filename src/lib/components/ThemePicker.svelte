@@ -8,6 +8,7 @@
 
 	let bg: string = initial.bg;
 	let fg: string = initial.fg;
+	let dark = false;
 
 	function getRGB(color: string) {
 		if (color) {
@@ -39,7 +40,7 @@
 	}
 
 	function exportTheme() {
-		const data = new TextEncoder().encode(JSON.stringify({ bg, fg }));
+		const data = new TextEncoder().encode(JSON.stringify({ bg, fg, dark }));
 		const blob = new Blob([data], { type: 'application/octet-stream' });
 		const url = URL.createObjectURL(blob);
 		const link = document.createElement('a');
@@ -152,14 +153,32 @@
 		return `${randomWord}-${randomSuffix}`;
 	}
 
-	async function importTheme(file: File) {
-		const data = JSON.parse(await file.text());
-		bg = data.bg;
-		fg = data.fg;
+	async function importTheme(el: HTMLInputElement) {
+		if (el.files?.length) {
+			const [file] = el.files;
+			const data = JSON.parse(await file.text());
+			bg = data.bg;
+			fg = data.fg;
+			dark = data.dark;
+
+			const form = el.closest('#import-form') as HTMLFormElement;
+			form.reset();
+		}
+	}
+
+	function setDarkMode(value: boolean) {
+		if (typeof window != 'undefined') {
+			if (value) {
+				document.body.classList.add('dark');
+			} else {
+				document.body.classList.remove('dark');
+			}
+		}
 	}
 
 	$: setColor('--color-bg', bg);
 	$: setColor('--color-fg', fg);
+	$: setDarkMode(dark);
 </script>
 
 <div class="fixed bottom-5 right-5 z-[999] w-80 rounded-md bg-white p-5 text-black">
@@ -173,20 +192,26 @@
 		<input type="color" bind:value={fg} />
 		<div>{formatRGB(getRGB(fg))}</div>
 	</div>
+	<label class="flex gap-3" for="dark">
+		<div>Dark</div>
+		<input type="checkbox" id="dark" bind:checked={dark} />
+	</label>
 	<div class="mt-5 grid grid-cols-2 gap-3">
-		<label
-			class="flex w-full cursor-pointer items-center justify-center rounded-md bg-black py-2 text-sm text-white"
-			for="import-theme"
-		>
-			<span>Import</span>
-			<input
-				class="hidden"
-				type="file"
-				id="import-theme"
-				on:change={(e) => e.currentTarget.files?.length && importTheme(e.currentTarget.files[0])}
-				accept=".quarkustheme"
-			/>
-		</label>
+		<form id="import-form">
+			<label
+				class="flex w-full cursor-pointer items-center justify-center rounded-md bg-black py-2 text-sm text-white"
+				for="import-theme"
+			>
+				<span>Import</span>
+				<input
+					class="hidden"
+					type="file"
+					id="import-theme"
+					on:change={(e) => importTheme(e.currentTarget)}
+					accept=".quarkustheme"
+				/>
+			</label>
+		</form>
 		<button class="w-full rounded-md bg-black py-2 text-sm text-white" on:click={exportTheme}
 			>Export</button
 		>

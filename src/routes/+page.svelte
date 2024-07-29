@@ -34,7 +34,7 @@
 </section>
 
 <section class="container mx-auto max-w-screen-xl py-20">
-	<div class=" rounded-xl border border-foreground/10 bg-white/70 p-32">
+	<div class=" rounded-xl border border-foreground/10 bg-white/40 p-32 dark:bg-black/40">
 		<SectionHeader label="Features">
 			A website that works for <br /> your business.
 		</SectionHeader>

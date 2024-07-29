@@ -1,8 +1,10 @@
 <svg
+	class="bg-background"
 	id="uuid-f8df215d-2683-445c-9843-65e73f6b3a0d"
 	xmlns="http://www.w3.org/2000/svg"
 	viewBox="0 0 241.7 186.07"
-	><defs></defs><g id="uuid-9785f4fc-f419-46ae-ba49-e3d08e620ddc"
+>
+	<defs></defs><g id="uuid-9785f4fc-f419-46ae-ba49-e3d08e620ddc"
 		><rect
 			class="uuid-f13be8c3-7350-4cad-b985-fd6d52c5ffa3"
 			x=".5"
@@ -117,7 +119,7 @@
 
 <style>
 	.uuid-f13be8c3-7350-4cad-b985-fd6d52c5ffa3 {
-		@apply fill-white;
+		@apply fill-white/60 dark:fill-black/40;
 	}
 	.uuid-6d0d5f7e-9bbb-4b74-9fb3-4bbdc77bc65b {
 		@apply fill-foreground;
