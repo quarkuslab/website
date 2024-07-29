@@ -104,9 +104,35 @@
 <section class="container mx-auto mt-40 py-20">
 	<SectionHeader label="Plans">We've got a plan that's perfect for you</SectionHeader>
 	<div class="mt-10 grid grid-cols-3 gap-5">
-		<PlanCard name="Standard" price={10} />
-		<PlanCard name="Premium" price={20} />
-		<PlanCard name="Enterprise" price={30} />
+		<PlanCard
+			description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sint eius fuga non ducimus totam sed?"
+			features={['Hello', 'World Class']}
+			name="Standard"
+			price={10}
+		/>
+		<PlanCard
+			description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sint eius fuga non ducimus totam sed?"
+			features={['Hello', 'World Class', 'Hello', 'World Class']}
+			name="Premium"
+			price={20}
+		/>
+		<PlanCard
+			description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sint eius fuga non ducimus totam sed?"
+			features={[
+				'Hello',
+				'World Class',
+				'Hello',
+				'World Class',
+				'Hello',
+				'World Class',
+				'Hello',
+				'World Class',
+				'Hello',
+				'World Class'
+			]}
+			name="Enterprise"
+			price={30}
+		/>
 	</div>
 </section>
 
