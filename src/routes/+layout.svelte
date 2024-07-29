@@ -6,6 +6,8 @@
 	import '@fontsource-variable/noto-serif';
 	import '@fontsource/aref-ruqaa';
 	import '@fontsource/kurale';
+	import '@fontsource-variable/inter';
+	import '@fontsource/roboto';
 	import '../assets/fonts/aesthetic/stylesheet.css';
 	import '../assets/fonts/nelphim/stylesheet.css';
 

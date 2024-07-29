@@ -12,6 +12,10 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
+		"@egoist/tailwindcss-icons": "^1.8.1",
+		"@iconify/json": "^2.2.232",
+		"@iconify/svelte": "^4.0.2",
+		"@iconify/utils": "^2.1.28",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/adapter-static": "^3.0.2",
 		"@sveltejs/kit": "^2.0.0",
@@ -37,12 +41,15 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource-variable/inter": "^5.0.19",
 		"@fontsource-variable/noto-serif": "^5.0.6",
+		"@fontsource-variable/roboto-flex": "^5.0.15",
 		"@fontsource/aref-ruqaa": "^5.0.13",
 		"@fontsource/bebas-neue": "^5.0.20",
 		"@fontsource/fira-sans": "^5.0.20",
 		"@fontsource/ibm-plex-serif": "^5.0.13",
 		"@fontsource/kurale": "^5.0.14",
+		"@fontsource/roboto": "^5.0.13",
 		"@fontsource/staatliches": "^5.0.20",
 		"@tailwind-plugin/expose-colors": "^1.1.8",
 		"lodash": "^4.17.21"

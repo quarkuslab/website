@@ -1,5 +1,6 @@
 import * as colors from "tailwindcss/colors"
 import exposeColors from "@tailwind-plugin/expose-colors"
+import { iconsPlugin, getIconCollections } from "@egoist/tailwindcss-icons"
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -14,7 +15,10 @@ export default {
         aref: ['Aref Ruqaa', 'serif'],
         kurale: ['Kurale', 'serif'],
         aesthetic: ['aestheticregular', 'serif'],
-        nelphim: ['nelphim', 'serif']
+        nelphim: ['nelphim', 'serif'],
+
+        roboto: ['Roboto', 'sans-serif'],
+        inter: ['Inter Variable', 'sans-serif']
       },
       colors: {
         background: colors.sky[50],
@@ -35,6 +39,9 @@ export default {
     exposeColors({
       extract: ["background", "foreground"],
       prefix: "--color"
+    }),
+    iconsPlugin({
+      collections: getIconCollections(["tabler"])
     })
   ],
 }
