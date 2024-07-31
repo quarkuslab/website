@@ -9,6 +9,7 @@
 	import SectionHeader from '$lib/components/SectionHeader.svelte';
 	import SiteBackground from '$lib/components/SiteBackground.svelte';
 	import SiteImage from '$lib/components/SiteImage.svelte';
+	import SolutionCard from '$lib/components/SolutionCard.svelte';
 </script>
 
 <section class="container mx-auto grid min-h-[calc(100vh-8rem)] place-items-center">
@@ -102,8 +103,8 @@
 </section>
 
 <section class="container mx-auto mt-40 py-20">
-	<SectionHeader label="Plans">We've got a plan that's perfect for you</SectionHeader>
-	<div class="mt-10 grid grid-cols-3 gap-5">
+	<SectionHeader label="Plans">We've got a plan that's <br /> perfect for you</SectionHeader>
+	<div class="mt-20 grid grid-cols-3 gap-5">
 		<PlanCard
 			description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sint eius fuga non ducimus totam sed?"
 			features={['Hello', 'World Class']}
@@ -115,7 +116,6 @@
 			features={['Hello', 'World Class', 'Hello', 'World Class']}
 			name="Premium"
 			price={20}
-			flip
 		/>
 		<PlanCard
 			description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sint eius fuga non ducimus totam sed?"
@@ -134,6 +134,21 @@
 			name="Enterprise"
 			price={30}
 		/>
+	</div>
+</section>
+
+<section class="container mx-auto mt-40 py-20">
+	<SectionHeader label="Solution">
+		Craft a standout
+		<br /> website with Quarkus
+	</SectionHeader>
+	<div class="mx-auto mt-20 grid max-w-screen-lg grid-cols-2 gap-x-5">
+		<SolutionCard>Look bigger</SolutionCard>
+		<SolutionCard>Earn customer trust</SolutionCard>
+		<SolutionCard>Showcase your brand</SolutionCard>
+		<SolutionCard>Connect with your ideal audience</SolutionCard>
+		<SolutionCard>Stand out from the crowd</SolutionCard>
+		<SolutionCard>Raise your value</SolutionCard>
 	</div>
 </section>
 

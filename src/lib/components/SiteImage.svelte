@@ -125,7 +125,7 @@
 		@apply fill-foreground;
 	}
 	.uuid-7d7b9bf3-202f-4fc8-92c3-65cd41bfa507 {
-		@apply stroke-foreground/40;
+		@apply stroke-foreground/20;
 	}
 	.uuid-7d7b9bf3-202f-4fc8-92c3-65cd41bfa507,
 	.uuid-d0140df8-6103-4122-ad87-c913e4523b6e {
