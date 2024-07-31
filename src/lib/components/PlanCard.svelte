@@ -26,7 +26,7 @@
 	<div class="mt-10">
 		<button
 			class="w-full rounded-md bg-foreground py-3 font-roboto text-background hover:bg-foreground/80"
-			>Get Plan</button
+			>Get {name} Plan</button
 		>
 	</div>
 </div>
