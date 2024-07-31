@@ -1,6 +1,6 @@
 import { circle, rectangle } from "./utils"
 import type { ActionReturn } from "svelte/action"
-import { shouldTrack, shape, position, pointer, shouldSyncScroll } from "./store"
+import { shouldTrack, shape, position, pointer, shouldSyncScroll, opacityValue } from "./store"
 import { get } from "svelte/store"
 import debounce from "lodash/debounce"
 
@@ -22,7 +22,11 @@ export function grow(node: HTMLElement, parameters: MouseGrowParameters): Action
   return {}
 }
 
-export function stick(node: HTMLElement): ActionReturn {
+interface MouseStickParameters {
+  opacity: number
+}
+
+export function stick(node: HTMLElement, { opacity }: MouseStickParameters = { opacity: 100 }): ActionReturn {
   node.addEventListener("mouseenter", debounce(() => {
     const fixedParent = node.closest(".fixed")
     const rect = node.getBoundingClientRect()
@@ -31,11 +35,15 @@ export function stick(node: HTMLElement): ActionReturn {
     if (fixedParent) {
       shouldSyncScroll.set(false)
     }
+
+    opacityValue.set(opacity)
     position.set({ x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 })
     shape.set(rectangle(rect.width, rect.height, radius))
     shouldTrack.set(false)
   }, 50))
+
   node.addEventListener("mouseleave", debounce(() => {
+    opacityValue.set(100)
     shouldSyncScroll.set(true)
     shouldTrack.set(true)
     shape.set(circle(10))

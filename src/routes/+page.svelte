@@ -6,10 +6,14 @@
 	import GraphicCircle from '$lib/components/GraphicCircle.svelte';
 	import { grow, stick } from '$lib/components/mouse/actions';
 	import PlanCard from '$lib/components/PlanCard.svelte';
+	import ProjectCard from '$lib/components/ProjectCard.svelte';
 	import SectionHeader from '$lib/components/SectionHeader.svelte';
 	import SiteBackground from '$lib/components/SiteBackground.svelte';
 	import SiteImage from '$lib/components/SiteImage.svelte';
 	import SolutionCard from '$lib/components/SolutionCard.svelte';
+
+	import p1 from '../assets/images/project-1.png?enhanced';
+	import p2 from '../assets/images/project-3.png?enhanced';
 </script>
 
 <section class="container mx-auto grid min-h-[calc(100vh-8rem)] place-items-center">
@@ -83,6 +87,21 @@
 	</div>
 </section>
 
+<section class="container mx-auto mt-40 py-20">
+	<SectionHeader label="Solution">
+		Craft a standout
+		<br /> website with Quarkus
+	</SectionHeader>
+	<div class="mx-auto mt-20 grid max-w-screen-lg grid-cols-2 gap-x-5">
+		<SolutionCard>Look bigger</SolutionCard>
+		<SolutionCard>Earn customer trust</SolutionCard>
+		<SolutionCard>Showcase your brand</SolutionCard>
+		<SolutionCard>Connect with your ideal audience</SolutionCard>
+		<SolutionCard>Stand out from the crowd</SolutionCard>
+		<SolutionCard>Raise your value</SolutionCard>
+	</div>
+</section>
+
 <section class="container mx-auto mt-40 max-w-screen-xl py-20">
 	<SectionHeader label="Process">
 		Imagine a website <br /> that sets the new standard.
@@ -99,6 +118,14 @@
 		<Card title="Testing">
 			<GraphicCircle slot="icon" />
 		</Card>
+	</div>
+</section>
+
+<section class="container mx-auto mt-40 py-20">
+	<SectionHeader label="Projects">Websites beyond the imagination</SectionHeader>
+	<div class="mx-auto mt-20 grid max-w-screen-xl grid-cols-2 gap-10">
+		<ProjectCard image={p1} label="Project 1" />
+		<ProjectCard image={p2} label="Project 2" />
 	</div>
 </section>
 
@@ -134,21 +161,6 @@
 			name="Enterprise"
 			price={30}
 		/>
-	</div>
-</section>
-
-<section class="container mx-auto mt-40 py-20">
-	<SectionHeader label="Solution">
-		Craft a standout
-		<br /> website with Quarkus
-	</SectionHeader>
-	<div class="mx-auto mt-20 grid max-w-screen-lg grid-cols-2 gap-x-5">
-		<SolutionCard>Look bigger</SolutionCard>
-		<SolutionCard>Earn customer trust</SolutionCard>
-		<SolutionCard>Showcase your brand</SolutionCard>
-		<SolutionCard>Connect with your ideal audience</SolutionCard>
-		<SolutionCard>Stand out from the crowd</SolutionCard>
-		<SolutionCard>Raise your value</SolutionCard>
 	</div>
 </section>
 
