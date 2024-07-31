@@ -8,8 +8,8 @@
 	<div class="h-20 w-20 text-foreground/30">
 		<slot name="icon" />
 	</div>
-	<div class="font-roboto flex-1 pl-10 text-foreground">
-		<div class="text-xl">{title}</div>
+	<div class="flex-1 pl-10 font-roboto text-foreground">
+		<div class="text-xl font-bold">{title}</div>
 		<div class="mt-3">
 			<slot />
 		</div>

@@ -115,6 +115,7 @@
 			features={['Hello', 'World Class', 'Hello', 'World Class']}
 			name="Premium"
 			price={20}
+			flip
 		/>
 		<PlanCard
 			description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sint eius fuga non ducimus totam sed?"
