@@ -12,20 +12,25 @@
 	import '../assets/fonts/nelphim/stylesheet.css';
 
 	import Mouse from '$lib/components/mouse/Mouse.svelte';
-	import { stick } from '$lib/components/mouse/actions';
+	import { grow, stick } from '$lib/components/mouse/actions';
 	import Navbar from '$lib/components/Navbar.svelte';
-	import { onMount } from 'svelte';
 	import ThemePicker from '$lib/components/ThemePicker.svelte';
 </script>
 
 <Mouse />
 <ThemePicker />
 <Navbar class="flex items-center justify-between">
-	<div class="font-staal text-2xl uppercase tracking-[0.2em] text-foreground">Quarkus</div>
+	<div>
+		<a
+			href="/"
+			class="font-staal text-2xl uppercase tracking-[0.2em] text-foreground"
+			use:grow={{ size: 50 }}>Quarkus</a
+		>
+	</div>
 	<div class="flex gap-5">
 		<a class="rounded-md px-3 py-1 font-fira text-foreground" href="/" use:stick>Services</a>
 		<a class="rounded-md px-3 py-1 font-fira text-foreground" href="/" use:stick>About</a>
-		<a class="rounded-md px-3 py-1 font-fira text-foreground" href="/" use:stick>Contact</a>
+		<a class="rounded-md px-3 py-1 font-fira text-foreground" href="/contact" use:stick>Contact</a>
 	</div>
 </Navbar>
 <main>

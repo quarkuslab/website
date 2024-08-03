@@ -1,6 +1,6 @@
 <script>
 	import { trackMouseMove, trackScroll } from './events';
-	import { opacity, path } from './store';
+	import { opacity, path, pointer, position } from './store';
 </script>
 
 <svelte:window on:mousemove={trackMouseMove()} on:scroll={trackScroll()} />

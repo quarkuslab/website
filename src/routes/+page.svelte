@@ -1,5 +1,8 @@
 <script>
 	import Card from '$lib/components/Card.svelte';
+	import ContactInput from '$lib/components/ContactInput.svelte';
+	import ContactSelect from '$lib/components/ContactSelect.svelte';
+	import ContactTextarea from '$lib/components/ContactTextarea.svelte';
 	import FeatureCard from '$lib/components/FeatureCard.svelte';
 	import GraphicArc from '$lib/components/GraphicArc.svelte';
 	import GraphicBar from '$lib/components/GraphicBar.svelte';
@@ -35,6 +38,40 @@
 				<SiteImage />
 			</div>
 		</div>
+	</div>
+</section>
+
+<section class="container mx-auto mt-40 max-w-screen-xl py-20">
+	<SectionHeader label="Process">
+		Imagine a website <br /> that sets the new standard.
+	</SectionHeader>
+	<div class="mt-20 grid grid-cols-3 gap-5">
+		<Card title="Design">
+			<GraphicBar slot="icon" />
+		</Card>
+
+		<Card title="Development">
+			<GraphicArc slot="icon" />
+		</Card>
+
+		<Card title="Testing">
+			<GraphicCircle slot="icon" />
+		</Card>
+	</div>
+</section>
+
+<section class="container mx-auto mt-40 py-20">
+	<SectionHeader label="Solution">
+		Craft a standout
+		<br /> website with Quarkus
+	</SectionHeader>
+	<div class="mx-auto mt-20 grid max-w-screen-lg grid-cols-2 gap-x-5">
+		<SolutionCard>Look bigger</SolutionCard>
+		<SolutionCard>Earn customer trust</SolutionCard>
+		<SolutionCard>Showcase your brand</SolutionCard>
+		<SolutionCard>Connect with your ideal audience</SolutionCard>
+		<SolutionCard>Stand out from the crowd</SolutionCard>
+		<SolutionCard>Raise your value</SolutionCard>
 	</div>
 </section>
 
@@ -88,40 +125,6 @@
 </section>
 
 <section class="container mx-auto mt-40 py-20">
-	<SectionHeader label="Solution">
-		Craft a standout
-		<br /> website with Quarkus
-	</SectionHeader>
-	<div class="mx-auto mt-20 grid max-w-screen-lg grid-cols-2 gap-x-5">
-		<SolutionCard>Look bigger</SolutionCard>
-		<SolutionCard>Earn customer trust</SolutionCard>
-		<SolutionCard>Showcase your brand</SolutionCard>
-		<SolutionCard>Connect with your ideal audience</SolutionCard>
-		<SolutionCard>Stand out from the crowd</SolutionCard>
-		<SolutionCard>Raise your value</SolutionCard>
-	</div>
-</section>
-
-<section class="container mx-auto mt-40 max-w-screen-xl py-20">
-	<SectionHeader label="Process">
-		Imagine a website <br /> that sets the new standard.
-	</SectionHeader>
-	<div class="mt-20 grid grid-cols-3 gap-5">
-		<Card title="Design">
-			<GraphicBar slot="icon" />
-		</Card>
-
-		<Card title="Development">
-			<GraphicArc slot="icon" />
-		</Card>
-
-		<Card title="Testing">
-			<GraphicCircle slot="icon" />
-		</Card>
-	</div>
-</section>
-
-<section class="container mx-auto mt-40 py-20">
 	<SectionHeader label="Projects">Websites beyond the imagination</SectionHeader>
 	<div class="mx-auto mt-20 grid max-w-screen-xl grid-cols-2 gap-10">
 		<ProjectCard image={p1} label="Project 1" />
@@ -164,4 +167,22 @@
 	</div>
 </section>
 
-<section class="min-h-screen"></section>
+<footer class="mt-20 border-t border-foreground/10 bg-white/40 dark:bg-black/40">
+	<div class="container mx-auto grid place-items-center py-40">
+		<div>
+			<div class="text-center font-nelphim text-6xl">Let's talk about your website</div>
+			<div class="mt-5 text-center text-xl">
+				Tell us about your business and we'll arrange a call to chat about your needs and how we can
+				help.
+			</div>
+		</div>
+		<div class="mt-10">
+			<a href="/contact" class="rounded-md bg-foreground px-10 py-3 text-background" use:stick
+				>Contact US</a
+			>
+		</div>
+	</div>
+	<div class="border-t border-foreground/10 py-3 text-sm">
+		<div class="container mx-auto grid place-items-center">© Quarkus | All rights reserved</div>
+	</div>
+</footer>
