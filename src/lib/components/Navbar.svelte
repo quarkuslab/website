@@ -27,7 +27,7 @@
 			class="fixed inset-x-0 top-0 z-40"
 		>
 			<div
-				class={`container mx-auto mt-8 h-16 rounded-md border border-foreground/10 bg-white/60 backdrop-blur-sm dark:bg-black/60 ${$$props.class}`}
+				class={`container mx-auto mt-8 h-16 rounded-md border border-foreground/10 bg-white/80 backdrop-blur-sm dark:bg-black/60 ${$$props.class}`}
 			>
 				<slot />
 			</div>

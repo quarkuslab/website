@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import '../app.css';
 	import '@fontsource/staatliches';
 	import '@fontsource/ibm-plex-serif';
@@ -15,6 +15,21 @@
 	import { grow, stick } from '$lib/components/mouse/actions';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import ThemePicker from '$lib/components/ThemePicker.svelte';
+
+	import { onNavigate } from '$app/navigation';
+
+	onNavigate((navigation) => {
+		// @ts-ignore
+		if (!document.startViewTransition) return;
+
+		return new Promise((resolve) => {
+			// @ts-ignore
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
 </script>
 
 <Mouse />
