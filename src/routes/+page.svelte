@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import Card from '$lib/components/Card.svelte';
 	import ContactInput from '$lib/components/ContactInput.svelte';
 	import ContactSelect from '$lib/components/ContactSelect.svelte';
@@ -177,8 +178,10 @@
 			</div>
 		</div>
 		<div class="mt-10">
-			<a href="/contact" class="rounded-md bg-foreground px-10 py-3 text-background" use:stick
-				>Contact US</a
+			<a
+				href={base + '/contact'}
+				class="rounded-md bg-foreground px-10 py-3 text-background"
+				use:stick>Contact US</a
 			>
 		</div>
 	</div>
