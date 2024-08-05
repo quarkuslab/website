@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="flex w-full flex-col items-center justify-end rounded-xl border border-foreground/10 bg-white/40 px-20 py-10 dark:bg-black/40"
+	class="flex w-full flex-col items-center justify-end rounded-xl border border-foreground/20 bg-white/40 px-20 py-10 dark:bg-black/40"
 	use:stick
 >
 	<div class="mb-20 mt-10 h-auto w-full">

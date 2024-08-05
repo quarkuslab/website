@@ -15,7 +15,7 @@
 	const borderStyles = flip ? 'border-background/50' : 'border-foreground/20';
 </script>
 
-<div class={`flex flex-col rounded-xl border border-foreground/10 p-10 ${styles}`} use:stick>
+<div class={`flex flex-col rounded-xl border border-foreground/20 p-10 ${styles}`} use:stick>
 	<div class="font-nelphim text-3xl font-bold">{name}</div>
 	<div class="mt-3 font-roboto">{description}</div>
 	<div class="mt-8 font-staal text-6xl">{price}$</div>
