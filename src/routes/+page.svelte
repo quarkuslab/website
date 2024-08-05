@@ -4,6 +4,8 @@
 	import ContactInput from '$lib/components/ContactInput.svelte';
 	import ContactSelect from '$lib/components/ContactSelect.svelte';
 	import ContactTextarea from '$lib/components/ContactTextarea.svelte';
+	import Faq from '$lib/components/faq/Faq.svelte';
+	import FaqSection from '$lib/components/faq/FaqSection.svelte';
 	import FeatureCard from '$lib/components/FeatureCard.svelte';
 	import GraphicArc from '$lib/components/GraphicArc.svelte';
 	import GraphicBar from '$lib/components/GraphicBar.svelte';
@@ -168,6 +170,46 @@
 	</div>
 </section>
 
+<section class="container mx-auto mt-40 py-20">
+	<div
+		class="mx-auto max-w-screen-lg rounded-xl border border-foreground/20 bg-white/40 px-20 py-20"
+	>
+		<SectionHeader>Frequently Asked Questions</SectionHeader>
+		<div class="mt-20">
+			<Faq>
+				<FaqSection key="a" question="What makes Quarkus different from other agencies?">
+					<p>
+						We don't believe that businesses should force themselves into the constraints of
+						template sites or drag-and-drop website builders. One-size-fits-all approaches like
+						these often leave you feeling dissatisfied and like your website isn't up to your
+						standard.
+					</p>
+					<p>
+						At Capari, we create custom websites that are built around your business and its needs.
+						We handle both design (how it looks) and development (how it works), meaning we can
+						fully express who your brand is and make a lasting impression on customers and
+						soon-to-be customers. Unlike other agencies that might not prioritize your website, we
+						see it as a vital part of your brand strategy; an extension of your brand that can get
+						you traction, interaction, and attention.
+					</p>
+				</FaqSection>
+				<FaqSection key="b" question="What happens when my website's finished?">
+					<p>
+						You'll have full control. We'll equip you with an easy-to-follow guide to update content
+						and manage your site independently. Plus, you can opt for our maintenance plan for
+						continued peace of mind, ensuring your site remains flawless in function.
+					</p>
+					<p>
+						The choice is yours post-launch - whether you choose to handle updates yourself or
+						continue our partnership for new features. We're flexible to fit your preferences and
+						needs.
+					</p>
+				</FaqSection>
+			</Faq>
+		</div>
+	</div>
+</section>
+
 <footer class="mt-20 border-t border-foreground/10 bg-white/40 dark:bg-black/40">
 	<div class="container mx-auto grid place-items-center pb-10 pt-20">
 		<div>
@@ -201,13 +243,6 @@
 				<span class="i-tabler-brand-linkedin text-2xl" />
 			</a>
 		</div>
-		<!-- <div class="mt-20 flex items-center justify-center gap-1">
-			<a href="/" class="rounded-md px-3 py-2 text-sm underline" use:stick>Instagram</a>
-			<a href="/" class="rounded-md px-3 py-2 text-sm underline" use:stick>Facebook</a>
-			<a href="/" class="rounded-md px-3 py-2 text-sm underline" use:stick>Youtube</a>
-			<a href="/" class="rounded-md px-3 py-2 text-sm underline" use:stick>Twitter</a>
-			<a href="/" class="rounded-md px-3 py-2 text-sm underline" use:stick>LinkedIn</a>
-		</div> -->
 	</div>
 	<div class="border-t border-foreground/10 py-3 text-sm">
 		<div class="container mx-auto grid place-items-center">© Quarkus | All rights reserved</div>
