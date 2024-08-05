@@ -28,11 +28,13 @@
 			<div class="mb-5 font-nelphim text-6xl font-light text-foreground" use:grow={{ size: 80 }}>
 				Let's build a website <br /> that makes you the easy choice
 			</div>
-			<div class="mb-10 font-fira text-xl text-foreground" use:grow={{ size: 50 }}>
+			<div class="mb-10 font-roboto text-xl text-foreground" use:grow={{ size: 50 }}>
 				A generic website can make your unique business look like <br /> just another face in the crowd.
 			</div>
-			<button class="rounded-md bg-foreground px-10 py-3 font-fira text-background" use:stick
-				>Get Started</button
+			<a
+				href={base}
+				class="rounded-md bg-foreground px-10 py-3 font-roboto text-background"
+				use:stick>Get Started</a
 			>
 		</div>
 		<div class="relative w-full max-w-2xl">
@@ -141,13 +143,13 @@
 		<PlanCard
 			description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sint eius fuga non ducimus totam sed?"
 			features={['Hello', 'World Class']}
-			name="Standard"
+			name="Basic"
 			price={10}
 		/>
 		<PlanCard
 			description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sint eius fuga non ducimus totam sed?"
 			features={['Hello', 'World Class', 'Hello', 'World Class']}
-			name="Premium"
+			name="Standard"
 			price={20}
 		/>
 		<PlanCard
@@ -164,7 +166,7 @@
 				'Hello',
 				'World Class'
 			]}
-			name="Enterprise"
+			name="Premium"
 			price={30}
 		/>
 	</div>
@@ -220,17 +222,15 @@
 <footer class="mt-40 border-t border-foreground/20 bg-white/40 dark:bg-black/40">
 	<div class="container mx-auto grid grid-cols-3 pb-20 pt-20">
 		<div class="col-span-2">
-			<div class="text-left font-nelphim text-5xl" use:grow={{ size: 80 }}>
-				Let's talk about your website
-			</div>
-			<div class="left mt-3 max-w-screen-sm text-xl" use:grow={{ size: 50 }}>
+			<div class="font-nelphim text-5xl" use:grow={{ size: 80 }}>Let's talk about your website</div>
+			<div class="mt-3 max-w-screen-sm font-roboto text-lg" use:grow={{ size: 50 }}>
 				Tell us about your business and we'll arrange a call to chat about your needs and how we can
 				help.
 			</div>
 			<div class="mt-10">
 				<a
 					href={base + '/contact'}
-					class="inline-block rounded-md bg-foreground px-10 py-3 text-background"
+					class="inline-block rounded-md bg-foreground px-10 py-3 font-roboto text-background"
 					use:stick>Book a Call</a
 				>
 			</div>

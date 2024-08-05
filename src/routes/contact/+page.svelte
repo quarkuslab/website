@@ -1,10 +1,15 @@
 <script>
+	import { base } from '$app/paths';
+	import { page } from '$app/stores';
 	import ContactInput from '$lib/components/ContactInput.svelte';
 	import ContactSelect from '$lib/components/ContactSelect.svelte';
 	import ContactTextarea from '$lib/components/ContactTextarea.svelte';
+	import { stick } from '$lib/components/mouse/actions';
+
+	const plan = $page.url.searchParams.get('plan');
 </script>
 
-<div class="container mx-auto grid place-items-center pb-40">
+<div class="container mx-auto grid place-items-center pb-20">
 	<div
 		class="w-full max-w-screen-md rounded-xl border border-foreground/10 bg-white/40 px-20 py-20"
 	>
@@ -21,6 +26,7 @@
 				class="col-span-2"
 				label="Select a Plan"
 				required
+				value={plan}
 				options={[
 					{
 						label: 'Basic Plan - 10$',
@@ -44,5 +50,38 @@
 				</button>
 			</div>
 		</form>
+	</div>
+
+	<div class="mt-10 flex flex-col items-center justify-between">
+		<div class="flex items-center justify-between gap-5">
+			<a class="flex items-start rounded-md px-3 py-3 font-roboto" href={base} use:stick>
+				<span class="i-tabler-mail mt-px text-xl"></span>
+				<span class="ml-2">hello@quarkus.in</span>
+			</a>
+			<a class="flex items-start rounded-md px-3 py-3 font-roboto" href={base} use:stick>
+				<span class="i-tabler-phone mt-px text-xl"></span>
+				<span class="ml-2">+91 9876676543</span>
+			</a>
+		</div>
+		<div class="mt-5 flex items-center justify-start gap-1">
+			<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+				<span class="i-tabler-brand-instagram text-2xl" />
+			</a>
+			<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+				<span class="i-tabler-brand-whatsapp text-2xl" />
+			</a>
+			<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+				<span class="i-tabler-brand-facebook text-2xl" />
+			</a>
+			<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+				<span class="i-tabler-brand-youtube text-2xl" />
+			</a>
+			<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+				<span class="i-tabler-brand-twitter text-2xl" />
+			</a>
+			<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+				<span class="i-tabler-brand-linkedin text-2xl" />
+			</a>
+		</div>
 	</div>
 </div>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { stick } from './mouse/actions';
 
 	export let name: string;
@@ -29,6 +30,9 @@
 		{/each}
 	</div>
 	<div class="mt-10">
-		<button class={`w-full rounded-md py-3 font-roboto ${btnStyles}`}>Get {name} Plan</button>
+		<a
+			href={base + `/contact?plan=${name.toLowerCase()}`}
+			class={`block w-full rounded-md py-3 text-center font-roboto ${btnStyles}`}>Get {name} Plan</a
+		>
 	</div>
 </div>
