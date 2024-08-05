@@ -169,7 +169,7 @@
 </section>
 
 <footer class="mt-20 border-t border-foreground/10 bg-white/40 dark:bg-black/40">
-	<div class="container mx-auto grid place-items-center py-40">
+	<div class="container mx-auto grid place-items-center pb-10 pt-20">
 		<div>
 			<div class="text-center font-nelphim text-6xl">Let's talk about your website</div>
 			<div class="mt-5 text-center text-xl">
@@ -184,6 +184,30 @@
 				use:stick>Contact US</a
 			>
 		</div>
+		<div class="mt-20 flex items-center justify-center gap-1">
+			<a href="/" class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+				<span class="i-tabler-brand-instagram text-2xl" />
+			</a>
+			<a href="/" class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+				<span class="i-tabler-brand-facebook text-2xl" />
+			</a>
+			<a href="/" class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+				<span class="i-tabler-brand-youtube text-2xl" />
+			</a>
+			<a href="/" class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+				<span class="i-tabler-brand-twitter text-2xl" />
+			</a>
+			<a href="/" class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+				<span class="i-tabler-brand-linkedin text-2xl" />
+			</a>
+		</div>
+		<!-- <div class="mt-20 flex items-center justify-center gap-1">
+			<a href="/" class="rounded-md px-3 py-2 text-sm underline" use:stick>Instagram</a>
+			<a href="/" class="rounded-md px-3 py-2 text-sm underline" use:stick>Facebook</a>
+			<a href="/" class="rounded-md px-3 py-2 text-sm underline" use:stick>Youtube</a>
+			<a href="/" class="rounded-md px-3 py-2 text-sm underline" use:stick>Twitter</a>
+			<a href="/" class="rounded-md px-3 py-2 text-sm underline" use:stick>LinkedIn</a>
+		</div> -->
 	</div>
 	<div class="border-t border-foreground/10 py-3 text-sm">
 		<div class="container mx-auto grid place-items-center">© Quarkus | All rights reserved</div>

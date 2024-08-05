@@ -34,7 +34,7 @@
 </script>
 
 <Mouse />
-<ThemePicker />
+<!-- <ThemePicker /> -->
 <Navbar class="flex items-center justify-between">
 	<div>
 		<a
