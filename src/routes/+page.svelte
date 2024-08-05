@@ -185,19 +185,19 @@
 			>
 		</div>
 		<div class="mt-20 flex items-center justify-center gap-1">
-			<a href="/" class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+			<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
 				<span class="i-tabler-brand-instagram text-2xl" />
 			</a>
-			<a href="/" class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+			<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
 				<span class="i-tabler-brand-facebook text-2xl" />
 			</a>
-			<a href="/" class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+			<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
 				<span class="i-tabler-brand-youtube text-2xl" />
 			</a>
-			<a href="/" class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+			<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
 				<span class="i-tabler-brand-twitter text-2xl" />
 			</a>
-			<a href="/" class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+			<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
 				<span class="i-tabler-brand-linkedin text-2xl" />
 			</a>
 		</div>
