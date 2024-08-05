@@ -10,11 +10,13 @@
 	export let question: string;
 </script>
 
-<li class="border-b border-foreground text-lg last:border-transparent">
+<li
+	class="border-b border-foreground font-roboto text-lg last:border-transparent"
+	use:stick={{ target: '.faq-trigger' }}
+>
 	<button
 		type="button"
-		class="flex w-full cursor-pointer items-center justify-between rounded-md px-1 py-3 text-left"
-		use:stick
+		class="faq-trigger flex w-full cursor-pointer items-center justify-between rounded-md px-1 py-3 text-left"
 		on:click={() => toggle(key)}
 	>
 		<span>{question}</span>
@@ -24,7 +26,7 @@
 		/>
 	</button>
 	{#if $isActive(key)}
-		<div transition:slide class="py-3" use:grow={{ size: 50 }}>
+		<div class="px-1 py-3 [&_p]:mb-3" transition:slide>
 			<slot />
 		</div>
 	{/if}

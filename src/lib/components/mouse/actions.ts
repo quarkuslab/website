@@ -32,32 +32,51 @@ export function grow(node: HTMLElement, parameters: MouseGrowParameters): Action
 }
 
 interface MouseStickParameters {
-  opacity: number
+  opacity?: number
+  target?: string
 }
 
-export function stick(node: HTMLElement, { opacity }: MouseStickParameters = { opacity: 100 }): ActionReturn {
-  const onMouseEnter = debounce(() => {
-    const fixedParent = node.closest(".fixed")
-    const rect = node.getBoundingClientRect()
-    const radius = parseInt(window.getComputedStyle(node).borderRadius.match(/\d+/)?.[0] || '0')
+export function stick(node: HTMLElement, { opacity, target }: MouseStickParameters = {}): ActionReturn {
+  if (!opacity) {
+    opacity = 100
+  }
+  let interval: number | undefined = undefined
+
+
+  const track = () => {
+    let el = node
+    if (target) {
+      el = node.querySelector(target) ?? node
+    }
+    const fixedParent = el.closest(".fixed")
+    const rect = el.getBoundingClientRect()
+    const radius = parseInt(window.getComputedStyle(el).borderRadius.match(/\d+/)?.[0] || '0')
 
     if (fixedParent) {
       shouldSyncScroll.set(false)
     }
 
+    shouldTrack.set(false)
     opacityValue.set(opacity)
     position.set({ x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 })
     shape.set(rectangle(rect.width, rect.height, radius))
-    shouldTrack.set(false)
-  }, 50)
-
-  const onMouseLeave = debounce(() => {
+  }
+  const untrack = () => {
     opacityValue.set(100)
     shouldSyncScroll.set(true)
     shouldTrack.set(true)
     shape.set(circle(10))
     position.set(get(pointer))
-  }, 50)
+  }
+
+  const onMouseEnter = () => {
+    interval = setInterval(track, 100)
+  }
+
+  const onMouseLeave = () => {
+    clearInterval(interval)
+    untrack()
+  }
 
   node.addEventListener("mouseenter", onMouseEnter)
   node.addEventListener("mouseleave", onMouseLeave)

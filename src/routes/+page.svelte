@@ -174,7 +174,7 @@
 	<div
 		class="mx-auto max-w-screen-lg rounded-xl border border-foreground/20 bg-white/40 px-20 py-20"
 	>
-		<SectionHeader>Frequently Asked Questions</SectionHeader>
+		<SectionHeader>Frequently Asked <br /> Questions</SectionHeader>
 		<div class="mt-20">
 			<Faq>
 				<FaqSection key="a" question="What makes Quarkus different from other agencies?">
@@ -203,6 +203,13 @@
 						The choice is yours post-launch - whether you choose to handle updates yourself or
 						continue our partnership for new features. We're flexible to fit your preferences and
 						needs.
+					</p>
+				</FaqSection>
+				<FaqSection key="c" question="How do we start a project?">
+					<p>
+						Fill out our contact form or send us an email directly to hello@quarkus.in We'll dive
+						deep into understanding your needs and expectations, and figure out the budget and
+						objectives for your project.
 					</p>
 				</FaqSection>
 			</Faq>

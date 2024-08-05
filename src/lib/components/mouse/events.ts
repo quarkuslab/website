@@ -15,7 +15,7 @@ export function trackScroll() {
   return () => {
     if (!get(shouldTrack) && get(shouldSyncScroll)) {
       const delta = last - window.scrollY
-      position.update(prev => ({ x: prev.x, y: prev.y + delta }))
+      position.update(prev => ({ x: prev.x, y: prev.y + delta }), { hard: true })
     }
     last = window.scrollY
   }
