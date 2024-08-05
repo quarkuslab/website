@@ -32,7 +32,7 @@
 				A generic website can make your unique business look like <br /> just another face in the crowd.
 			</div>
 			<a
-				href={base}
+				href={base + '/contact'}
 				class="rounded-md bg-foreground px-10 py-3 font-roboto text-background"
 				use:stick>Get Started</a
 			>

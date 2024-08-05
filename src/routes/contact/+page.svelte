@@ -1,12 +1,17 @@
-<script>
+<script lang="ts">
 	import { base } from '$app/paths';
 	import { page } from '$app/stores';
 	import ContactInput from '$lib/components/ContactInput.svelte';
 	import ContactSelect from '$lib/components/ContactSelect.svelte';
 	import ContactTextarea from '$lib/components/ContactTextarea.svelte';
 	import { stick } from '$lib/components/mouse/actions';
+	import { beforeUpdate } from 'svelte';
 
-	const plan = $page.url.searchParams.get('plan');
+	let plan: string | null;
+
+	beforeUpdate(() => {
+		plan = $page.url.searchParams.get('plan');
+	});
 </script>
 
 <div class="container mx-auto grid place-items-center pb-20">
