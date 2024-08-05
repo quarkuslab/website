@@ -1,36 +1,27 @@
 <script lang="ts">
-	import { quintOut } from 'svelte/easing';
-	import { fade, fly } from 'svelte/transition';
+	import { onMount } from 'svelte';
 
-	let y = 0;
-	let lastScroll = 0;
-	let scrollOffset = 0;
+	let el: HTMLElement;
 
-	$: show = y > 50;
+	onMount(() => {
+		if (typeof document === undefined) return;
+		if (typeof el === undefined) return;
+
+		const observer = new IntersectionObserver(
+			([e]) => e.target.classList.toggle('pinned', e.intersectionRatio < 1),
+			{
+				threshold: [1]
+			}
+		);
+
+		observer.observe(el);
+	});
 </script>
 
-<svelte:window
-	bind:scrollY={y}
-	on:scroll={() => {
-		scrollOffset = lastScroll - window.scrollY;
-		lastScroll = window.scrollY;
-	}}
-/>
-<nav class="h-32 w-full">
-	<div class={`container mx-auto h-full ${$$props.class}`}>
-		<slot />
+<div bind:this={el} class="group sticky -top-px z-40 mt-8 h-16 w-full">
+	<div
+		class={`container mx-auto mt-4 h-full rounded-md border border-transparent bg-transparent backdrop-blur-sm transition group-[.pinned]:translate-y-2 group-[.pinned]:border-foreground/20 group-[.pinned]:bg-white/80 ${$$props.class}`}
+	>
+		<slot></slot>
 	</div>
-	{#if show}
-		<div
-			in:fly={{ y: 50, duration: 700, opacity: 0, easing: quintOut }}
-			out:fade
-			class="fixed inset-x-0 top-0 z-40"
-		>
-			<div
-				class={`container mx-auto mt-8 h-16 rounded-md border border-foreground/20 bg-white/80 backdrop-blur-sm dark:bg-black/60 ${$$props.class}`}
-			>
-				<slot />
-			</div>
-		</div>
-	{/if}
-</nav>
+</div>

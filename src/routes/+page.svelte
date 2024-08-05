@@ -65,7 +65,7 @@
 	</div>
 </section>
 
-<section class="container mx-auto mt-40 scroll-mt-10 py-20 py-20" id="about">
+<section class="container mx-auto mt-40 scroll-mt-10 py-20" id="about">
 	<SectionHeader label="Solution">
 		Craft a standout
 		<br /> website with Quarkus

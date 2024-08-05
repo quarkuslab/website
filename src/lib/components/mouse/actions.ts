@@ -48,7 +48,7 @@ export function stick(node: HTMLElement, { opacity, target }: MouseStickParamete
     if (target) {
       el = node.querySelector(target) ?? node
     }
-    const fixedParent = el.closest(".fixed")
+    const fixedParent = el.closest(".fixed") ?? el.closest(".sticky")
     const rect = el.getBoundingClientRect()
     const radius = parseInt(window.getComputedStyle(el).borderRadius.match(/\d+/)?.[0] || '0')
 

@@ -43,7 +43,7 @@
 <Navbar class="flex items-center justify-between">
 	<div>
 		<a
-			href={base}
+			href={base + '/#'}
 			class="rounded-md px-3 py-2 font-staal text-2xl uppercase tracking-[0.2em] text-foreground"
 			use:stick>Quarkus</a
 		>
