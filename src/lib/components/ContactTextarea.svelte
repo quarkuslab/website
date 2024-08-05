@@ -15,7 +15,7 @@
 	<p class="mb-2">{label}</p>
 	<textarea
 		{...$$restProps}
-		class="w-full rounded-md border border-foreground/20 bg-white px-5 py-3"
+		class="w-full rounded-md border border-foreground/20 bg-white px-5 py-3 dark:bg-black"
 		{name}
 		{id}
 	/>

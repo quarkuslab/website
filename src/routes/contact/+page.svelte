@@ -16,7 +16,7 @@
 
 <div class="container mx-auto grid place-items-center pb-20">
 	<div
-		class="w-full max-w-screen-md rounded-xl border border-foreground/10 bg-white/40 px-20 py-20"
+		class="w-full max-w-screen-md rounded-xl border border-foreground/10 bg-white/40 px-20 py-20 dark:bg-black/40"
 	>
 		<div class="text-center font-nelphim text-4xl">
 			Fill out the form and we'll be in touch to coordinate a call.
@@ -50,7 +50,11 @@
 			<ContactTextarea class="col-span-2" label="Anything you'd like us to know?" />
 			<ContactInput class="col-span-2" label="PS — how did you hear about us?" type="text" />
 			<div class="col-span-2">
-				<button class="w-full rounded-md bg-foreground py-3 text-background" type="submit">
+				<button
+					class="w-full rounded-md bg-foreground py-3 text-background"
+					type="submit"
+					use:stick
+				>
 					Book a Call
 				</button>
 			</div>

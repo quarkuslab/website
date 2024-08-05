@@ -174,7 +174,7 @@
 
 <section class="container mx-auto mt-40 py-20">
 	<div
-		class="mx-auto max-w-screen-lg rounded-xl border border-foreground/20 bg-white/40 px-20 py-20"
+		class="mx-auto max-w-screen-lg rounded-xl border border-foreground/20 bg-white/40 px-20 py-20 dark:bg-black/40"
 	>
 		<SectionHeader>Frequently Asked <br /> Questions</SectionHeader>
 		<div class="mt-20">
