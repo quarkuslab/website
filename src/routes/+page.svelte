@@ -78,7 +78,7 @@
 	</div>
 </section>
 
-<section class="container mx-auto max-w-screen-xl py-20">
+<section class="container mx-auto mt-40 max-w-screen-xl py-20">
 	<div class=" rounded-xl border border-foreground/20 bg-white/40 p-32 dark:bg-black/40">
 		<SectionHeader label="Features">
 			A website that works for <br /> your business.
@@ -217,7 +217,7 @@
 	</div>
 </section>
 
-<footer class="mt-20 border-t border-foreground/20 bg-white/40 dark:bg-black/40">
+<footer class="mt-40 border-t border-foreground/20 bg-white/40 dark:bg-black/40">
 	<div class="container mx-auto grid place-items-center pb-10 pt-20">
 		<div>
 			<div class="text-center font-nelphim text-6xl">Let's talk about your website</div>
