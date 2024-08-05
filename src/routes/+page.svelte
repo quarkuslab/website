@@ -32,7 +32,7 @@
 				A generic website can make your unique business look like <br /> just another face in the crowd.
 			</div>
 			<button class="rounded-md bg-foreground px-10 py-3 font-fira text-background" use:stick
-				>Get Website</button
+				>Get Started</button
 			>
 		</div>
 		<div class="relative w-full max-w-2xl">
@@ -218,37 +218,61 @@
 </section>
 
 <footer class="mt-40 border-t border-foreground/20 bg-white/40 dark:bg-black/40">
-	<div class="container mx-auto grid place-items-center pb-10 pt-20">
-		<div>
-			<div class="text-center font-nelphim text-6xl">Let's talk about your website</div>
-			<div class="mt-5 text-center text-xl">
+	<div class="container mx-auto grid grid-cols-3 pb-20 pt-20">
+		<div class="col-span-2">
+			<div class="text-left font-nelphim text-5xl" use:grow={{ size: 80 }}>
+				Let's talk about your website
+			</div>
+			<div class="left mt-3 max-w-screen-sm text-xl" use:grow={{ size: 50 }}>
 				Tell us about your business and we'll arrange a call to chat about your needs and how we can
 				help.
 			</div>
+			<div class="mt-10">
+				<a
+					href={base + '/contact'}
+					class="inline-block rounded-md bg-foreground px-10 py-3 text-background"
+					use:stick>Book a Call</a
+				>
+			</div>
 		</div>
-		<div class="mt-10">
-			<a
-				href={base + '/contact'}
-				class="rounded-md bg-foreground px-10 py-3 text-background"
-				use:stick>Contact US</a
-			>
-		</div>
-		<div class="mt-20 flex items-center justify-center gap-1">
-			<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
-				<span class="i-tabler-brand-instagram text-2xl" />
-			</a>
-			<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
-				<span class="i-tabler-brand-facebook text-2xl" />
-			</a>
-			<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
-				<span class="i-tabler-brand-youtube text-2xl" />
-			</a>
-			<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
-				<span class="i-tabler-brand-twitter text-2xl" />
-			</a>
-			<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
-				<span class="i-tabler-brand-linkedin text-2xl" />
-			</a>
+
+		<div class="flex flex-col justify-between">
+			<div>
+				<a class="flex items-start rounded-md px-3 py-3 font-roboto" href={base} use:stick>
+					<span class="i-tabler-mail mt-px text-2xl"></span>
+					<div class="ml-3">
+						<div class="font-semibol text-lg">Email Us</div>
+						<div class="font-semibol">hello@quarkus.in</div>
+					</div>
+				</a>
+				<a class="flex items-start rounded-md px-3 py-3 font-roboto" href={base} use:stick>
+					<span class="i-tabler-phone mt-px text-2xl"></span>
+					<div class="ml-3">
+						<div class="font-semibol text-lg">Call Us</div>
+						<div class="font-semibol">+91 9876676543</div>
+					</div>
+				</a>
+			</div>
+			<div class="flex items-center justify-start gap-1">
+				<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+					<span class="i-tabler-brand-instagram text-2xl" />
+				</a>
+				<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+					<span class="i-tabler-brand-whatsapp text-2xl" />
+				</a>
+				<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+					<span class="i-tabler-brand-facebook text-2xl" />
+				</a>
+				<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+					<span class="i-tabler-brand-youtube text-2xl" />
+				</a>
+				<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+					<span class="i-tabler-brand-twitter text-2xl" />
+				</a>
+				<a href={base} class="grid h-10 w-10 place-items-center rounded-md" use:stick>
+					<span class="i-tabler-brand-linkedin text-2xl" />
+				</a>
+			</div>
 		</div>
 	</div>
 	<div class="border-t border-foreground/10 py-3 text-sm">
