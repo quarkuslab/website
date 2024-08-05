@@ -49,7 +49,7 @@
 			/>
 			<ContactTextarea class="col-span-2" label="Anything you'd like us to know?" />
 			<ContactInput class="col-span-2" label="PS — how did you hear about us?" type="text" />
-			<div class="col-span-2">
+			<div class="col-span-2 mt-5">
 				<button
 					class="w-full rounded-md bg-foreground py-3 text-background"
 					type="submit"

@@ -8,6 +8,10 @@
     --color-fg: 7 89 133;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
   }

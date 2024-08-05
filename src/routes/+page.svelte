@@ -24,7 +24,7 @@
 
 <section class="container mx-auto grid min-h-[calc(100vh-8rem)] place-items-center">
 	<div class="mb-32 grid grid-cols-2 items-center gap-10">
-		<div>
+		<div class="px-3">
 			<div class="mb-5 font-nelphim text-6xl font-light text-foreground" use:grow={{ size: 80 }}>
 				Let's build a website <br /> that makes you the easy choice
 			</div>
@@ -65,7 +65,7 @@
 	</div>
 </section>
 
-<section class="container mx-auto mt-40 py-20">
+<section class="container mx-auto mt-40 scroll-mt-10 py-20 py-20" id="about">
 	<SectionHeader label="Solution">
 		Craft a standout
 		<br /> website with Quarkus
@@ -129,7 +129,7 @@
 	</div>
 </section>
 
-<section class="container mx-auto mt-40 py-20">
+<section class="container mx-auto mt-40 scroll-mt-10 py-20 py-20" id="projects">
 	<SectionHeader label="Projects">Websites beyond the imagination</SectionHeader>
 	<div class="mx-auto mt-20 grid max-w-screen-xl grid-cols-2 gap-10">
 		<ProjectCard image={p1} label="Project 1" />
@@ -137,7 +137,7 @@
 	</div>
 </section>
 
-<section class="container mx-auto mt-40 py-20">
+<section class="container mx-auto mt-40 scroll-mt-10 py-20" id="services">
 	<SectionHeader label="Plans">We've got a plan that's <br /> perfect for you</SectionHeader>
 	<div class="mt-20 grid grid-cols-3 gap-5">
 		<PlanCard
