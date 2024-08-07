@@ -5,7 +5,6 @@ export async function createTask(data: ContactSchema) {
   const headers = new Headers()
   headers.append("Authorization", CLICKUP_TOKEN)
   headers.append("Content-Type", "application/json")
-  // const res = await fetch(`https://api.clickup.com/api/v2/list/${CLICKUP_LIST_ID}/field`, { headers })
   const res = await fetch(`https://api.clickup.com/api/v2/list/${CLICKUP_LIST_ID}/task`, {
     headers,
     method: "POST",
