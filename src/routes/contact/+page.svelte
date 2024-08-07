@@ -1,11 +1,16 @@
 <script lang="ts">
+	import { enhance } from '$app/forms';
 	import { base } from '$app/paths';
 	import { page } from '$app/stores';
 	import ContactInput from '$lib/components/ContactInput.svelte';
 	import ContactSelect from '$lib/components/ContactSelect.svelte';
 	import ContactTextarea from '$lib/components/ContactTextarea.svelte';
-	import { stick } from '$lib/components/mouse/actions';
+	import { grow, stick } from '$lib/components/mouse/actions';
 	import { beforeUpdate } from 'svelte';
+
+	type E = Event & {
+		currentTarget: HTMLFormElement;
+	};
 
 	let plan: string | null;
 
@@ -14,17 +19,25 @@
 	});
 </script>
 
-<div class="container mx-auto grid place-items-center pb-20">
+<div class="container mx-auto grid place-items-center pb-20 pt-20">
 	<div
 		class="w-full max-w-screen-md rounded-xl border border-foreground/10 bg-white/40 px-20 py-20 dark:bg-black/40"
+		use:grow={{ size: 0 }}
 	>
 		<div class="text-center font-nelphim text-4xl">
 			Fill out the form and we'll be in touch to coordinate a call.
 		</div>
-		<form class="mt-20 grid grid-cols-2 gap-x-5 gap-y-5 font-roboto">
-			<ContactInput class="col-span-2" label="Name" type="text" required />
-			<ContactInput class="col-span-1" label="Email" type="email" required />
-			<ContactInput class="col-span-1" label="Phone Number" type="tel" required />
+		<form method="POST" class="mt-20 grid grid-cols-2 gap-x-5 gap-y-5 font-roboto" use:enhance>
+			<ContactInput class="col-span-2" label="Name" type="text" />
+			<ContactInput class="col-span-1" label="Email" type="email" />
+			<ContactInput
+				title="Enter 10 digit mobile number"
+				class="col-span-1"
+				label="Phone Number"
+				type="text"
+				pattern="[0-9]{10}"
+				required
+			/>
 			<ContactInput class="col-span-1" label="Business Name" type="text" required />
 			<ContactInput class="col-span-1" label="Location" type="text" required />
 			<ContactSelect
@@ -50,11 +63,7 @@
 			<ContactTextarea class="col-span-2" label="Anything you'd like us to know?" />
 			<ContactInput class="col-span-2" label="PS — how did you hear about us?" type="text" />
 			<div class="col-span-2 mt-5">
-				<button
-					class="w-full rounded-md bg-foreground py-3 text-background"
-					type="submit"
-					use:stick
-				>
+				<button class="w-full rounded-md bg-foreground py-3 text-background" type="submit">
 					Book a Call
 				</button>
 			</div>

@@ -37,7 +37,7 @@ interface MouseStickParameters {
 }
 
 export function stick(node: HTMLElement, { opacity, target }: MouseStickParameters = {}): ActionReturn {
-  if (!opacity) {
+  if (typeof opacity == "undefined") {
     opacity = 100
   }
   let interval: number | undefined = undefined
